@@ -1,6 +1,6 @@
 {
   "name": "obsidian-excerpt-collector",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Copy selected text into preset target notes without modifying the source note.",
   "main": "main.js",
   "scripts": {

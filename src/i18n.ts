@@ -1,7 +1,7 @@
 /**
  * 轻量 i18n 模块：不依赖 Obsidian API，便于单元测试。
  *
- * 语言由插件 onload 时读取 Obsidian 的 getLanguage() 决定：
+ * 语言由插件 onload 时读取 Obsidian 当前 locale 决定：
  * - zh / zh-CN / zh-TW 等以 zh 开头的语言使用简体中文；
  * - 其余语言使用英文（也是未知语言的回退语言）。
  *

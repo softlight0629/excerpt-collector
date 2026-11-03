@@ -3,7 +3,6 @@ import {
   Plugin,
   TFile,
   debounce,
-  getLanguage,
   moment,
   type Menu,
 } from "obsidian";
@@ -66,18 +65,10 @@ function readInsertPosition(value: unknown): InsertPosition {
 
 /**
  * 读取 Obsidian 界面语言。
- * getLanguage() 需要 Obsidian 1.8.7+；旧版本回退到 moment 的 locale，
- * 再失败则使用英文。
+ * Obsidian 会把 moment 的 locale 同步为界面语言（如 zh-cn / en），
+ * 该 API 兼容插件声明的最低版本，不依赖较新的 getLanguage()。
  */
 function detectAppLanguage(): string {
-  try {
-    if (typeof getLanguage === "function") {
-      return getLanguage();
-    }
-  } catch {
-    // 旧版本没有 getLanguage，继续尝试 moment
-  }
-
   try {
     return moment.locale();
   } catch {

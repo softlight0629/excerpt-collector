@@ -136,7 +136,6 @@ const stub = {
   FuzzySuggestModal,
   Setting,
   debounce,
-  getLanguage: () => stubLanguage,
   moment: {
     locale: () => stubLanguage,
   },

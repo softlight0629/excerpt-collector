@@ -55,7 +55,9 @@ export class ExcerptCollectorSettingTab extends PluginSettingTab {
     containerEl.empty();
     containerEl.addClass("ec-settings");
 
-    containerEl.createEl("h2", { text: t("settings.title") });
+    new Setting(containerEl)
+      .setName(t("settings.title"))
+      .setHeading();
     containerEl.createEl("p", {
       cls: "ec-settings-intro",
       text: t("settings.intro"),
@@ -399,10 +401,10 @@ export class ExcerptCollectorSettingTab extends PluginSettingTab {
   ): void {
     if (containsContentPlaceholder(template)) {
       warning.setText("");
-      warning.style.display = "none";
+      warning.addClass("ec-hidden");
       return;
     }
-    warning.style.display = "";
+    warning.removeClass("ec-hidden");
     warning.setText(t("settings.templateWarning"));
   }
 

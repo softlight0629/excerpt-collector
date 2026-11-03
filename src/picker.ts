@@ -183,8 +183,8 @@ export class TargetPickerModal extends FuzzySuggestModal<TargetItem> {
     void this.plugin.collectToTarget(target, this.request);
   }
 
-  onOpen(): void {
-    super.onOpen();
+  async onOpen(): Promise<void> {
+    await super.onOpen();
 
     const instructions = [
       { command: "↑↓", purpose: t("common.move") },
