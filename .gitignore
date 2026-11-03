@@ -1,0 +1,16 @@
+# 依赖
+node_modules/
+
+# 构建产物（发布时再随 Release 上传）
+main.js
+main.js.map
+*.js.map
+
+# 本地测试
+test-vault/.obsidian/workspace*.json
+test-vault/.obsidian/workspace*.mobile.json
+
+# 系统文件
+.DS_Store
+Thumbs.db
+*.log

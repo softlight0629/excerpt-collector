@@ -1,0 +1,231 @@
+/* ==========================================================================
+   Excerpt Collector 样式
+   ========================================================================== */
+
+/* 目标选择框 --------------------------------------------------------------- */
+.ec-suggest-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.ec-suggest-number {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: var(--radius-s, 4px);
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+  font-size: var(--font-ui-smaller);
+  font-weight: 600;
+}
+
+.ec-suggest-info {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.ec-suggest-name {
+  font-weight: 600;
+  color: var(--text-normal);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ec-suggest-path {
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ec-suggest-warning {
+  flex: 0 0 auto;
+  font-size: var(--font-ui-smaller);
+  color: var(--text-error);
+}
+
+.ec-suggest-tag {
+  flex: 0 0 auto;
+  font-size: var(--font-ui-smaller);
+  color: var(--text-faint);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-s, 4px);
+  padding: 1px 6px;
+}
+
+/* 设置面板 ----------------------------------------------------------------- */
+.ec-settings .ec-settings-intro {
+  margin-bottom: 1em;
+  color: var(--text-muted);
+}
+
+.ec-target-card {
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m, 8px);
+  padding: 4px 14px 10px;
+  margin-bottom: 10px;
+}
+
+.ec-target-card .setting-item {
+  border-top: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.ec-target-header .setting-item-name {
+  font-weight: 600;
+}
+
+.ec-target-inputs .setting-item-control {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ec-input-name {
+  min-width: 160px;
+  width: 28%;
+}
+
+.ec-input-path {
+  min-width: 240px;
+  flex: 1 1 55%;
+}
+
+.ec-target-status {
+  margin-top: 2px;
+}
+
+.ec-target-status.ec-warning,
+.ec-warning {
+  color: var(--text-warning, var(--text-error));
+}
+
+.ec-target-status.ec-ok,
+.ec-ok {
+  color: var(--text-success, var(--text-accent));
+}
+
+.ec-template-setting .setting-item-control,
+.ec-scope-setting .setting-item-control {
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.ec-template-input,
+.ec-scope-input {
+  width: 100%;
+  min-width: 100%;
+  font-family: var(--font-monospace);
+  font-size: var(--font-smaller, 12px);
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.ec-scope-input {
+  white-space: pre;
+  overflow-wrap: normal;
+  overflow-x: auto;
+}
+
+.ec-heading-input {
+  min-width: 240px;
+}
+
+.ec-template-warning {
+  margin-top: -4px;
+}
+
+.ec-placeholder-help {
+  margin: 6px 0 14px;
+  color: var(--text-muted);
+  font-size: var(--font-ui-smaller);
+}
+
+.ec-placeholder-help summary {
+  cursor: pointer;
+  user-select: none;
+}
+
+.ec-placeholder-help ul {
+  margin: 6px 0 0;
+  padding-left: 1.4em;
+}
+
+.ec-placeholder-help li {
+  margin: 2px 0;
+}
+
+.ec-placeholder-help code {
+  color: var(--text-normal);
+}
+
+.ec-empty-targets {
+  font-style: italic;
+}
+
+.ec-footer {
+  margin-top: 24px;
+  padding-top: 10px;
+  border-top: 1px solid var(--background-modifier-border);
+  text-align: center;
+}
+
+/* 统计弹窗 ----------------------------------------------------------------- */
+.ec-stats-summary {
+  color: var(--text-muted);
+}
+
+.ec-stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0 14px;
+}
+
+.ec-stats-table th,
+.ec-stats-table td {
+  border-bottom: 1px solid var(--background-modifier-border);
+  padding: 6px 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.ec-stats-table th {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.ec-stats-table td:last-child,
+.ec-stats-table th:last-child {
+  white-space: nowrap;
+}
+
+.ec-stats-path {
+  color: var(--text-muted);
+  font-size: var(--font-ui-smaller);
+  word-break: break-all;
+}
+
+.ec-hint {
+  color: var(--text-muted);
+  font-size: var(--font-ui-smaller);
+}
+
+/* 移动端 ------------------------------------------------------------------- */
+@media (max-width: 600px) {
+  .ec-input-name,
+  .ec-input-path,
+  .ec-heading-input {
+    width: 100%;
+    min-width: 0;
+    flex: 1 1 100%;
+  }
+}

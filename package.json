@@ -1,0 +1,33 @@
+{
+  "name": "obsidian-excerpt-collector",
+  "version": "0.1.0",
+  "description": "Copy selected text into preset target notes without modifying the source note.",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "tsc --noEmit --skipLibCheck && node esbuild.config.mjs production",
+    "check": "tsc --noEmit --skipLibCheck",
+    "test": "node --test tests/*.test.mjs",
+    "pretest:smoke": "npm run build",
+    "test:smoke": "node scripts/smoke-test.mjs",
+    "test:all": "npm test && npm run test:smoke",
+    "deploy:test": "node scripts/deploy-test.mjs"
+  },
+  "keywords": [
+    "obsidian",
+    "obsidian-plugin",
+    "excerpt",
+    "collector",
+    "notes"
+  ],
+  "author": "a",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "builtin-modules": "^3.3.0",
+    "esbuild": "^0.28.2",
+    "obsidian": "^1.14.4",
+    "tslib": "^2.8.1",
+    "typescript": "^5.8.3"
+  }
+}

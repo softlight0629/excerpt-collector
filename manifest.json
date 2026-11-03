@@ -1,0 +1,9 @@
+{
+  "id": "excerpt-collector",
+  "name": "Excerpt Collector",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Copy selected text into preset target notes. The source note is never modified.",
+  "author": "a",
+  "isDesktopOnly": false
+}
