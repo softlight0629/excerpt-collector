@@ -205,7 +205,7 @@ excerpt-collector/
 - [x] `manifest.json` 填写（id、name、description、author、minAppVersion）
 - [x] README 功能说明、安装方法、使用示例
 - [x] LICENSE（MIT）
-- [ ] 将 `manifest.json`、`package.json`、`LICENSE` 中的作者名 `a` 改为你的正式署名
+- [x] 作者署名：softlight（`manifest.json`、`package.json`、`LICENSE`）
 - [ ] 添加 README 截图/GIF
 - [ ] 创建 GitHub 仓库并发布 Release（包含 `main.js`、`manifest.json`、`styles.css`）
 - [ ] 提交 Obsidian 社区插件列表 PR（`obsidian-releases`）

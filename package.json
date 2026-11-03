@@ -20,7 +20,7 @@
     "collector",
     "notes"
   ],
-  "author": "a",
+  "author": "softlight",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^22.10.0",
