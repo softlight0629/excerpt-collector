@@ -200,17 +200,6 @@ excerpt-collector/
 └── styles.css
 ```
 
-## 发布准备清单
-
-- [x] `manifest.json` 填写（id、name、description、author、minAppVersion）
-- [x] README 功能说明、安装方法、使用示例
-- [x] LICENSE（MIT）
-- [x] 作者署名：softlight（`manifest.json`、`package.json`、`LICENSE`）
-- [ ] 添加 README 截图/GIF
-- [ ] 创建 GitHub 仓库并发布 Release（包含 `main.js`、`manifest.json`、`styles.css`）
-- [ ] 提交 Obsidian 社区插件列表 PR（`obsidian-releases`）
-- [x] README 明确声明：**本插件不会修改源笔记**
-
 ## English Summary
 
 **Excerpt Collector** copies selected text into preset target notes without ever modifying the source note. It uses a copy-and-append workflow instead of the extract-and-replace approach of similar plugins.
