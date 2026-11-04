@@ -236,20 +236,47 @@ export class ExcerptCollectorSettingTab extends PluginSettingTab {
       );
     });
 
-    inputs.addText((text) => {
-      text
-        .setPlaceholder(t("settings.targetPathPlaceholder"))
-        .setValue(target.path)
-        .onChange((value) => {
-          target.path = normalizeVaultPath(value);
-          this.saveSoon();
-          updateStatus();
-        });
-      text.inputEl.addClass("ec-input-path");
-      text.inputEl.setAttribute(
+    inputs.addDropdown((dropdown) => {
+      const files = this.app.vault
+        .getMarkdownFiles()
+        .sort((a, b) => a.path.localeCompare(b.path));
+
+      dropdown.addOption("", t("settings.chooseTargetNote"));
+      for (const file of files) {
+        dropdown.addOption(file.path, file.path);
+      }
+
+      // 目标笔记可能已被删除或重命名，保留原路径供用户确认
+      const currentPath = normalizeVaultPath(target.path);
+      if (
+        currentPath &&
+        !files.some((file) => file.path === currentPath)
+      ) {
+        dropdown.addOption(
+          currentPath,
+          t("settings.targetMissingOption", { path: currentPath }),
+        );
+      }
+
+      dropdown.setValue(currentPath);
+      dropdown.selectEl.addClass("ec-input-path");
+      dropdown.selectEl.setAttribute(
         "aria-label",
         t("settings.targetPathAria"),
       );
+      dropdown.onChange((value) => {
+        const path = normalizeVaultPath(value);
+        const file = files.find((item) => item.path === path);
+        target.path = file ? file.path : path;
+        if (
+          file &&
+          (!target.name.trim() || isDefaultTargetName(target.name))
+        ) {
+          target.name = file.basename;
+        }
+        void this.plugin.saveSettings();
+        this.display();
+      });
     });
 
     updateStatus();

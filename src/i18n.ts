@@ -102,7 +102,7 @@ const EN = {
     "Select text in any note and copy-collect it into a preset target note. The source note is never modified.",
   "settings.targets": "Collection targets ({count})",
   "settings.targetsHint":
-    "The display name is used in the picker and success messages; the path must be the full path of a Markdown note in the vault. Numbers 1-9 are optional and enable quick selection.",
+    "Select each target note from the dropdown. The display name is used in the picker and success messages; numbers 1-9 are optional and enable quick selection.",
   "settings.noTargets":
     'No collection targets yet. Click "Add collection target" below, or choose any note directly while vault-wide search is enabled.',
   "settings.addTarget": "Add collection target",
@@ -113,12 +113,12 @@ const EN = {
   "settings.chooseFileTooltip": "Choose a note from the vault",
   "settings.deleteTargetTooltip": "Delete this target",
   "settings.targetNamePlaceholder": "Display name",
-  "settings.targetPathPlaceholder":
-    "Target note path, e.g. Collections/Excerpts.md",
+  "settings.chooseTargetNote": "Choose a target note…",
+  "settings.targetMissingOption": "Missing: {path}",
   "settings.targetNameAria": "Target display name",
-  "settings.targetPathAria": "Target note path",
+  "settings.targetPathAria": "Target note",
   "settings.newTargetName": "New target",
-  "settings.statusNoPath": "No target path configured.",
+  "settings.statusNoPath": "No target note selected.",
   "settings.statusFound": "✓ Note found: {path}",
   "settings.statusNotMarkdown":
     "The target is a file but not a Markdown note.",
@@ -295,7 +295,7 @@ const ZH: Record<TranslationKey, string> = {
     "选中任意笔记中的文字，一键复制收录到预设的目标笔记。源笔记永远不会被修改。",
   "settings.targets": "收录目标（{count}）",
   "settings.targetsHint":
-    "显示名称用于选择框和成功提示；路径必须是库内 Markdown 笔记的完整路径。数字编号可选，用于快速选择。",
+    "从下拉列表中选择目标笔记。显示名称用于选择框和成功提示；数字编号可选，用于快速选择。",
   "settings.noTargets":
     "还没有收录目标。点击下方「添加收录目标」创建一个，或在开启全库搜索时直接从任意笔记中选择。",
   "settings.addTarget": "添加收录目标",
@@ -306,11 +306,12 @@ const ZH: Record<TranslationKey, string> = {
   "settings.chooseFileTooltip": "从库中选择笔记",
   "settings.deleteTargetTooltip": "删除该收录目标",
   "settings.targetNamePlaceholder": "显示名称",
-  "settings.targetPathPlaceholder": "目标笔记路径，例如：收录/摘录集.md",
+  "settings.chooseTargetNote": "选择目标笔记…",
+  "settings.targetMissingOption": "已缺失：{path}",
   "settings.targetNameAria": "目标显示名称",
-  "settings.targetPathAria": "目标笔记路径",
+  "settings.targetPathAria": "目标笔记",
   "settings.newTargetName": "新收录目标",
-  "settings.statusNoPath": "尚未设置目标路径。",
+  "settings.statusNoPath": "尚未选择目标笔记。",
   "settings.statusFound": "✓ 已找到笔记：{path}",
   "settings.statusNotMarkdown": "目标是文件，但不是 Markdown 笔记。",
   "settings.statusMissing": "⚠ 找不到目标笔记，收录时会提示错误。",

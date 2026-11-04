@@ -45,7 +45,7 @@ Copy the generated `main.js`, `manifest.json`, and `styles.css` into `.obsidian/
 ## Quick start
 
 1. Open Settings → Excerpt Collector and click **Add collection target**.
-2. Enter a display name and the full path of a target note (for example `Collections/Excerpts.md`). You can optionally assign a number.
+2. Pick the target note from the dropdown, then optionally adjust its display name and assign a number.
 3. Select text in any note and run **Collect selected text to note**.
 4. Choose a target in the picker, or press its number. The text is appended to the target note.
 5. The source note remains unchanged.
